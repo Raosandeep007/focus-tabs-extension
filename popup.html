@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Focus Tabs by Domain</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 10px;
+            width: 360px;
+        }
+
+        input {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 6px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            max-width: 360px;
+        }
+
+        #search {
+            width: 100%;
+            padding: 6px;
+            margin-bottom: 10px;
+        }
+
+        .domain-row {
+            margin-bottom: 8px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .domain-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f5f5f5;
+            padding: 8px;
+            cursor: pointer;
+        }
+
+        .domain-header-content {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex: 1;
+        }
+
+        .domain-header-favicon {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+
+        .domain-header.active {
+            background-color: #d1f5d3;
+            font-weight: bold;
+        }
+
+        .close-domain {
+            background: #ffdcdc;
+            border: none;
+            padding: 4px 8px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .close-domain:hover {
+            background: #ffbaba;
+        }
+
+        .tabs-list {
+            padding: 6px 8px;
+            background: #fafafa;
+            display: none;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        .tab-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 4px 0;
+            padding: 8px;
+            border-radius: 4px;
+            background: #f9f9f9;
+        }
+
+        .tab-row.active-tab {
+            background-color: #e0f7fa;
+            border-left: 4px solid #00bcd4;
+            font-weight: 500;
+        }
+
+        .tab-info {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            flex: 1;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .tab-title {
+            font-size: 14px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .tab-favicon {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+        }
+
+
+        .close-tab {
+            background: #eee;
+            border: none;
+            padding: 4px 6px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .close-tab:hover {
+            background: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <input id="search" placeholder="Filter domains..." />
+    <div id="tabs-container">Loading...</div>
+    <script src="popup.js"></script>
+</body>
+
+</html>
